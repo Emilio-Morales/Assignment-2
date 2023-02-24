@@ -30,3 +30,24 @@ The program terminates and prints out how many guests ate a cupcake, which due t
 
 
 PROBLEM 2
+
+For this problem, I believe the second approach was the best.
+
+With the first approach, I viewed it as inefficient because too many threads could be trying to access the the vase at the same time, even when it is locked. This can lead to inneficient use of our processors because it would be pointless for many threads to continuously keep trying to access inaccesible data. 
+
+With regards to the third approach, I believe it is better than the first, however it could lead to innefficiency if a guest repeatedly wants to keep viewing the vase before others show interest, since it would be possible to hold up the line.
+
+I believe the second approach was the best because although it would be first come first serve, many threads would not be trying to access the data at the same time seeing as how there is a flag informing them of wheter that data is even available in the first place.
+
+The way I implemented this approach is as follows: 
+
+Each thread (Guest) contained three booleans. One to keep track of whether they had already seen the vase, another to show whether they are currently viewing the vase, and one that would be randomly selected to be true or false determinig whether they are interested in seeing the vase.
+
+I also had an ArrayList corresponding to each guests' interest status in the vase.
+
+I had a while loop that would only stop interating once each guest decided they no longer wanted to view the vase. Before a guest could even view the vase, a flag would determine whether the vase was even available to be seen in the first place. If it was, then the guest would commence viewing the vase and this flag would be set to false. A bit of time would pass and then the flag would go back to true, simulating that the guest was done viewing it. 
+
+I also counted the number of guests that viewed the vase and printed it at the end of the program's execution.
+
+
+	
