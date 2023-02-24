@@ -47,6 +47,8 @@ I also had an ArrayList corresponding to each guests' interest status in the vas
 
 I had a while loop that would only stop interating once each guest decided they no longer wanted to view the vase. Before a guest could even view the vase, a flag would determine whether the vase was even available to be seen in the first place. If it was, then the guest would commence viewing the vase and this flag would be set to false. A bit of time would pass and then the flag would go back to true, simulating that the guest was done viewing it. 
 
+Whenevr a guest viewed the vase, afterwards it would be randomly selected whether they were still interested in veiwing it or not. I did this to simulate that a guest can visit the vase as many times as they'd like.
+
 I also counted the number of guests that viewed the vase and printed it at the end of the program's execution.
 
 
